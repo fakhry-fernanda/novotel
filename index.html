@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.7.3/dist/alpine.min.js" defer></script>
+
+    <title>Novotel</title>
+</head>
+<body class="flex">
+    <aside class="sticky top-0 w-[220px] h-screen pt-8 px-3 border-r">
+        <img src="./assets/Logo.png" alt="">
+        <div class="mt-8 flex flex-col gap-4">
+            <div class="group flex items-center gap-3 py-2 pl-3 rounded-lg hover:bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="group-hover:stroke-blue-600" d="M2.25 12.0001L11.204 3.04507C11.644 2.60607 12.356 2.60607 12.795 3.04507L21.75 12.0001M4.5 9.75007V19.8751C4.5 20.4961 5.004 21.0001 5.625 21.0001H9.75V16.1251C9.75 15.5041 10.254 15.0001 10.875 15.0001H13.125C13.746 15.0001 14.25 15.5041 14.25 16.1251V21.0001H18.375C18.996 21.0001 19.5 20.4961 19.5 19.8751V9.75007M8.25 21.0001H16.5" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-gray-600 text-sm font-medium group-hover:text-blue-600">Dashboard</span>
+            </div>
+            <div class="group flex items-center gap-3 py-2 pl-3 rounded-lg hover:bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="group-hover:stroke-blue-600" d="M16.862 4.487L18.549 2.799C18.9007 2.44733 19.3777 2.24976 19.875 2.24976C20.3723 2.24976 20.8493 2.44733 21.201 2.799C21.5527 3.15068 21.7502 3.62766 21.7502 4.125C21.7502 4.62235 21.5527 5.09933 21.201 5.451L10.582 16.07C10.0533 16.5984 9.40137 16.9867 8.685 17.2L6 18L6.8 15.315C7.01328 14.5986 7.40163 13.9467 7.93 13.418L16.862 4.487ZM16.862 4.487L19.5 7.125M18 14V18.75C18 19.3467 17.7629 19.919 17.341 20.341C16.919 20.763 16.3467 21 15.75 21H5.25C4.65326 21 4.08097 20.763 3.65901 20.341C3.23705 19.919 3 19.3467 3 18.75V8.25C3 7.65327 3.23705 7.08097 3.65901 6.65901C4.08097 6.23706 4.65326 6 5.25 6H10" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-gray-600 text-sm font-medium group-hover:text-blue-600">Frontdesk</span>
+            </div>
+            <div class="group flex items-center gap-3 py-2 pl-3 rounded-lg hover:bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="group-hover:stroke-blue-600" d="M11.35 3.836C11.285 4.046 11.25 4.269 11.25 4.5C11.25 4.914 11.586 5.25 12 5.25H16.5C16.6989 5.25 16.8897 5.17098 17.0303 5.03033C17.171 4.88968 17.25 4.69891 17.25 4.5C17.2501 4.27491 17.2164 4.05109 17.15 3.836M11.35 3.836C11.492 3.3767 11.7774 2.97493 12.1643 2.68954C12.5511 2.40414 13.0192 2.25011 13.5 2.25H15C16.012 2.25 16.867 2.918 17.15 3.836M11.35 3.836C10.974 3.859 10.6 3.886 10.226 3.916C9.095 4.01 8.25 4.973 8.25 6.108V8.25M17.15 3.836C17.526 3.859 17.9 3.886 18.274 3.916C19.405 4.01 20.25 4.973 20.25 6.108V16.5C20.25 17.0967 20.0129 17.669 19.591 18.091C19.169 18.5129 18.5967 18.75 18 18.75H15.75M8.25 8.25H4.875C4.254 8.25 3.75 8.754 3.75 9.375V20.625C3.75 21.246 4.254 21.75 4.875 21.75H14.625C15.246 21.75 15.75 21.246 15.75 20.625V18.75M8.25 8.25H14.625C15.246 8.25 15.75 8.754 15.75 9.375V18.75M7.5 15.75L9 17.25L12 13.5" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-gray-600 text-sm font-medium group-hover:text-blue-600">Guest</span>
+            </div>
+            <div class="group flex items-center gap-3 py-2 pl-3 rounded-lg hover:bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="group-hover:stroke-blue-600" d="M17.593 3.32206C18.693 3.45006 19.5 4.39906 19.5 5.50706V21.0001L12 17.2501L4.5 21.0001V5.50706C4.5 4.39906 5.306 3.45006 6.407 3.32206C10.1232 2.89069 13.8768 2.89069 17.593 3.32206Z" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-gray-600 text-sm font-medium group-hover:text-blue-600">Room</span>
+            </div>
+            <div class="group flex items-center gap-3 py-2 pl-3 rounded-lg hover:bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="group-hover:stroke-blue-600" d="M9.568 3H5.25C4.65326 3 4.08097 3.23705 3.65901 3.65901C3.23705 4.08097 3 4.65326 3 5.25V9.568C3 10.165 3.237 10.738 3.659 11.159L13.24 20.74C13.939 21.439 15.02 21.612 15.847 21.07C17.9286 19.7066 19.7066 17.9286 21.07 15.847C21.612 15.02 21.439 13.939 20.74 13.24L11.16 3.66C10.951 3.45077 10.7029 3.28478 10.4297 3.17154C10.1565 3.05829 9.86371 3 9.568 3Z" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6H6.008V6.008H6V6Z" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-gray-600 text-sm font-medium group-hover:text-blue-600">Deal</span>
+            </div>
+            <div class="group flex items-center gap-3 py-2 pl-3 rounded-lg hover:bg-blue-50">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path class="group-hover:stroke-blue-600" d="M12 6V18M9 15.182L9.879 15.841C11.05 16.72 12.949 16.72 14.121 15.841C15.293 14.962 15.293 13.538 14.121 12.659C13.536 12.219 12.768 12 12 12C11.275 12 10.55 11.78 9.997 11.341C8.891 10.462 8.891 9.038 9.997 8.159C11.103 7.28 12.897 7.28 14.003 8.159L14.418 8.489M21 12C21 13.1819 20.7672 14.3522 20.3149 15.4442C19.8626 16.5361 19.1997 17.5282 18.364 18.364C17.5282 19.1997 16.5361 19.8626 15.4442 20.3149C14.3522 20.7672 13.1819 21 12 21C10.8181 21 9.64778 20.7672 8.55585 20.3149C7.46392 19.8626 6.47177 19.1997 5.63604 18.364C4.80031 17.5282 4.13738 16.5361 3.68508 15.4442C3.23279 14.3522 3 13.1819 3 12C3 9.61305 3.94821 7.32387 5.63604 5.63604C7.32387 3.94821 9.61305 3 12 3C14.3869 3 16.6761 3.94821 18.364 5.63604C20.0518 7.32387 21 9.61305 21 12Z" stroke="#5D6679" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-gray-600 text-sm font-medium group-hover:text-blue-600">Rate</span>
+            </div>
+        </div>
+    </aside>
+    <div class="w-full">
+        <!-- Header -->
+        <div class="py-7 px-5 flex justify-between items-center">
+            <div class="bg-gray-50 px-4 py-2 w-[400px] flex gap-2">
+                <img src="./assets/Search.png" alt="">
+                <input class="bg-transparent outline-none w-full" type="text" placeholder="Search for rooms and offers">
+            </div>
+            <div class="flex items-center gap-6">
+                <img src="./assets/Notification.png" alt="">
+                <div class="w-10 h-10">
+                    <img class="rounded-full" src="./assets/andrey-zvyagintsev-x0c6vTO5ibA-unsplash 3.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+        <div class="py-[10px] px-5 flex justify-between items-center">
+            <p class="text-sm font-medium text-gray-600">Friday, November 18,2022</p>
+            <button class="px-6 py-[7.5px] bg-blue-500 text-sm text-white font-medium rounded-lg">Create booking</button>
+        </div>
+
+        <main class="pt-5 px-5">
+            <div class="mb-5 py-5 px-4 rounded-lg shadow-md">
+                <h3 class="mb-4 text-xl font-medium">Overview</h3>
+                <div class="flex gap-16">
+                    <div class="flex items-end gap-4">
+                        <div>
+                            <p class="mb-1 text-sm text-gray-400">Today's</p>
+                            <p class="font-medium text-gray-600">Check-in</p>
+                        </div>
+                        <span class="leading-tight text-[26px] text-blue-600 font-semibold">23</span>
+                    </div>
+
+                    <div class="flex items-end gap-4">
+                        <div>
+                            <p class="mb-1 text-sm text-gray-400">Today's</p>
+                            <p class="font-medium text-gray-600">Check-out</p>
+                        </div>
+                        <span class="leading-tight text-[26px] text-blue-600 font-semibold">13</span>
+                    </div>
+
+                    <div class="flex items-end gap-4">
+                        <div>
+                            <p class="mb-1 text-sm text-gray-400">Total</p>
+                            <p class="font-medium text-gray-600">In hotel</p>
+                        </div>
+                        <span class="leading-tight text-[26px] text-blue-600 font-semibold">60</span>
+                    </div>
+
+                    <div class="flex items-end gap-4">
+                        <div>
+                            <p class="mb-1 text-sm text-gray-400">Total</p>
+                            <p class="font-medium text-gray-600">Available room</p>
+                        </div>
+                        <span class="leading-tight text-[26px] text-blue-600 font-semibold">10</span>
+                    </div>
+
+                    <div class="flex items-end gap-4">
+                        <div>
+                            <p class="mb-1 text-sm text-gray-400">Total</p>
+                            <p class="font-medium text-gray-600">Occupied room</p>
+                        </div>
+                        <span class="leading-tight text-[26px] text-blue-600 font-semibold">90</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5 py-5 px-4 rounded-lg shadow-md">
+                <h3 class="mb-4 text-xl font-medium">Rooms</h3>
+                <div class="flex gap-10">
+                    <div class="w-[230px] p-4 border border-grey-100 rounded-lg">
+                        <div class="mb-1 flex justify-between">
+                            <div class="flex items-center rounded-[4px] bg-green-100 py-[2px] px-2 text-green-700 text-xs font-medium">
+                                <p>2 Deals</p>
+                            </div>
+                            <img src="./assets/More.svg" alt="">
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="mb-1 font-medium">Single Sharing</p>
+                            <p class="mb-1">
+                                <span class="text-[23px] font-semibold">2</span>
+                                <span class="text-lg font-medium text-gray-400">/30</span></p>
+                            <p>
+                                <span class="text-[23px] font-semibold text-blue-600">$ 568</span>
+                                <span class="font-medium text-gray-400">/ day</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[230px] p-4 border border-grey-100 rounded-lg">
+                        <div class="mb-1 flex justify-between">
+                            <div class="flex items-center rounded-[4px] bg-green-100 py-[2px] px-2 text-green-700 text-xs font-medium">
+                                <p>2 Deals</p>
+                            </div>
+                            <img src="./assets/More.svg" alt="">
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="mb-1 font-medium">Double Sharing</p>
+                            <p class="mb-1">
+                                <span class="text-[23px] font-semibold">2</span>
+                                <span class="text-lg font-medium text-gray-400">/35</span></p>
+                            <p>
+                                <span class="text-[23px] font-semibold text-blue-600">$ 1,068</span>
+                                <span class="font-medium text-gray-400">/ day</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[230px] p-4 border border-grey-100 rounded-lg">
+                        <div class="mb-1 flex justify-between">
+                            <div class="invisible items-center rounded-[4px] bg-green-100 py-[2px] px-2 text-green-700 text-xs font-medium">
+                                <p>2 Deals</p>
+                            </div>
+                            <img src="./assets/More.svg" alt="">
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="mb-1 font-medium">Triple Sharing</p>
+                            <p class="mb-1">
+                                <span class="text-[23px] font-semibold">2</span>
+                                <span class="text-lg font-medium text-gray-400">/25</span></p>
+                            <p>
+                                <span class="text-[23px] font-semibold text-blue-600">$ 1,568</span>
+                                <span class="font-medium text-gray-400">/ day</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-[230px] p-4 border border-grey-100 rounded-lg">
+                        <div class="mb-1 flex justify-between">
+                            <div class="invisible items-center rounded-[4px] bg-green-100 py-[2px] px-2 text-green-700 text-xs font-medium">
+                                <p>2 Deals</p>
+                            </div>
+                            <img src="./assets/More.svg" alt="">
+                        </div>
+                        <div class="text-gray-600">
+                            <p class="mb-1 font-medium">VIP Suit</p>
+                            <p class="mb-1">
+                                <span class="text-[23px] font-semibold">4</span>
+                                <span class="text-lg font-medium text-gray-400">/10</span></p>
+                            <p>
+                                <span class="text-[23px] font-semibold text-blue-600">$ 2,568</span>
+                                <span class="font-medium text-gray-400">/ day</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-5 columns-5 flex gap-5">
+                <div class="w-3/5 py-5 px-4 rounded-lg shadow-md">
+                    <h3 class="mb-4 text-xl font-medium">Room Status</h3>
+                    <div class="flex justify-between">
+                        <div class="w-[250px]">
+                            <div class="flex justify-between mb-2 font-medium text-gray-600">
+                                <span>Occupied rooms</span>
+                                <span>104</span>
+                            </div>
+    
+                            <div class="flex justify-between mb-2 font-medium text-gray-400">
+                                <span>Clean</span>
+                                <span>90</span>
+                            </div>
+    
+                            <div class="flex justify-between mb-2 font-medium text-gray-400">
+                                <span>Dirty</span>
+                                <span>4</span>
+                            </div>
+    
+                            <div class="flex justify-between font-medium text-gray-400">
+                                <span>Inspected</span>
+                                <span>60</span>
+                            </div>
+                            
+                        </div>
+                        <div class="w-[250px]">
+                            <div class="flex justify-between mb-2 font-medium text-gray-600">
+                                <span>Available rooms</span>
+                                <span>104</span>
+                            </div>
+    
+                            <div class="flex justify-between mb-2 font-medium text-gray-400">
+                                <span>Clean</span>
+                                <span>30</span>
+                            </div>
+    
+                            <div class="flex justify-between mb-2 font-medium text-gray-400">
+                                <span>Dirty</span>
+                                <span>19</span>
+                            </div>
+    
+                            <div class="flex justify-between font-medium text-gray-400">
+                                <span>Inspected</span>
+                                <span>30</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-2/5 py-5 px-4 rounded-lg shadow-md">
+                    <h3 class="mb-4 text-xl font-medium">Floor Status</h3>
+                    <div class="flex justify-center gap-3">
+                        <div class="relative">
+                            <svg height="120" width="220">
+                                <!-- <circle class="stroke-blue-400" r="100" cx="110" cy="110" fill="none" stroke-width="20"></circle> -->
+                                <path d="M 10 110
+                                    A 50 50 0 0 1 210 110"
+                                    fill="none"
+                                    stroke-width="20"
+                                    stroke-linecap="round"
+                                    class="stroke-gray-200"
+                                />
+                            </svg>
+                            <div class="absolute left-1/2 bottom-4 transform -translate-x-1/2 text-[26px] font-semibold text-gray-800">80%</div>
+                        </div>
+
+                        <div>
+                            <div class="flex items-center gap-2 mb-[10px]">
+                                <img src="./assets/Ellipse 87.png" alt="">
+                                <span class="text-xs text-gray-400">Completed</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <img src="./assets/Ellipse 88.png" alt="">
+                                <span class="text-xs text-gray-400">Yet to complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="columns-5 flex gap-5">
+                <div class="w-3/5 py-5 px-4 rounded-lg shadow-md">
+                    <div class="mb-4 flex items-center justify-between">
+                        <h3 class="text-xl font-medium">Occupancy Statistics</h3>
+                        <div class="p-2 flex items-center gap-2 border border-gray-500 rounded-lg">
+                            <img src="./assets/Calendar.svg" alt="">
+                            <span class="text-sm font-medium text-gray-500">Monthly</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-5">
+                        <img src="./assets/Percentage.png" alt="">
+                        <img src="./assets/Frame 110.png" alt="">
+                    </div>
+                </div>
+                <div class="w-2/5 py-5 px-4 rounded-lg shadow-md">
+                    <div class="mb-4 flex justify-between items-center">
+                        <h3 class="text-xl font-medium">Customers Feedback</h3>
+                        <img src="./assets/More.svg" alt="">
+                    </div>
+                    <div class="pb-2 mb-4 flex justify-between items-center border-b border-gray-200">
+                        <div class="text-sm font-medium">
+                            <p class="mb-1 text-gray-600">Mark</p>
+                            <p class="text-gray-400">Food could be better.</p>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">A201</div>
+                    </div>
+                    <div class="pb-2 mb-4 flex justify-between items-center border-b border-gray-200">
+                        <div class="text-sm font-medium">
+                            <p class="mb-1 text-gray-600">Christian</p>
+                            <p class="text-gray-400">Facilities are not enough for amount paid.</p>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">A101</div>
+                    </div>
+                    <div class="pb-2 mb-4 flex justify-between items-center">
+                        <div class="text-sm font-medium">
+                            <p class="mb-1 text-gray-600">Alexander</p>
+                            <p class="text-gray-400">Room cleaning could be better</p>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">A301</div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
